@@ -1,7 +1,13 @@
-# PowerShell script to configure Git LFS for a project
-# Tracks all files except Safe_Folder directories
+# Set console window title
+$host.ui.RawUI.WindowTitle = "PlayzDownloader - Git LFS Project Setup"
 
-Write-Host "🔄 Starting Git LFS setup..."
+# Define the repository path
+$RepoPath = "C:\Safe_Folder\DrtXpmvi\Programming\Languages\Python\Projects\PlayzDownloader\Github-Repo"
+
+# Change to the repository directory
+Set-Location -Path $RepoPath
+
+Write-Host "🔄 Starting Git LFS setup in '$RepoPath'..."
 
 # 1. Ensure Git LFS is installed
 git lfs install
